@@ -1,8 +1,13 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
+const queryString = require('query-string');
+
 const Person = () => {
-    let params = useParams();
-    console.log(params)
+    const params = useParams();
+    const location = useLocation()
+    console.log(params);
+    console.log(location);
+    console.log(queryString.parse(location.pathname))
     return ( 
         <div>
             person number {params.id}

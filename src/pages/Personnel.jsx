@@ -1,6 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import React from "react";
+import { useState } from "react";
 const Personnel = () => {
+    const [data,setData]=useState({age:15})
     const personnel=[
         {id:1,name:"Ali"},
         {id:2,name:"Javad"},
@@ -9,7 +11,7 @@ const Personnel = () => {
     return ( 
         <div>
             {personnel.map(item=>{
-                return <NavLink key={item.id} to={`/person/${item.name}`}>{item.name}</NavLink>
+                return <Link key={item.id} to={`/person/${item.name}`}  state={data} >{item.name}</Link>
             })}
         </div>
      );

@@ -5,7 +5,7 @@ const Navigation = () => {
         {id:1,name:"Home",to:"/"},
         {id:2,name:"About-us",to:"/about-us"},
         {id:3,name:"Profile",to:"/profile"},
-        {id:3,name:"Personnel",to:"/personnel"}
+        {id:4,name:"Personnel",to:"/personnel"}
     ]
     return ( 
         <nav>
