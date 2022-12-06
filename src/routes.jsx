@@ -9,16 +9,6 @@ import Person from "./pages/Person";
 import Profile1 from './pages/Profile1';
 import Profile2 from './pages/Profile2';
 
-
-
-const routes=[
-    {id:1,path:"/",element:<Home />},
-    {id:2,path:"/about-us",element:<AboutUs />},
-    {id:3,path:"/profile",element:<Profile />},
-    {id:4,path:"/*",element:<NotFound />},
-    {id:5,path:"/Personnel",element:<Personnel />},
-    {id:6,path:"/Person/:id",element:<Person />}
-];
 const Routee = () => {
     return ( 
         <Routes>
@@ -28,9 +18,9 @@ const Routee = () => {
                 <Route path="1" element={<Profile1 />} />
                 <Route path="2" element={<Profile2 />} />
             </Route>
-            <Route path="/*" element={<NotFound />} />
             <Route path="/Personnel" element={<Personnel />} />
-            <Route path="/Person" element={<Person />} />
+            <Route path="/Person/:id" element={<Person />} />
+            <Route path="/*" element={<NotFound />} />
         </Routes>
      );
 }

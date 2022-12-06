@@ -11,7 +11,7 @@ const Personnel = () => {
     return ( 
         <div>
             {personnel.map(item=>{
-                return <Link key={item.id} to={`/person/${item.name}`}  state={data} >{item.name}</Link>
+                return <Link key={item.id} to={`/Person/${item.name}`}  state={data} >{item.name}</Link>
             })}
         </div>
      );
