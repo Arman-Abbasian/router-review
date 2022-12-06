@@ -6,6 +6,11 @@ import React from "react";
 import NotFound from "./pages/NotFound";
 import Personnel from "./pages/Personnel";
 import Person from "./pages/Person";
+import Profile1 from './pages/Profile1';
+import Profile2 from './pages/Profile2';
+
+
+
 const routes=[
     {id:1,path:"/",element:<Home />},
     {id:2,path:"/about-us",element:<AboutUs />},
@@ -17,9 +22,15 @@ const routes=[
 const Routee = () => {
     return ( 
         <Routes>
-            {routes.map(item=>{
-                return <Route key={item.id} path={item.path} element={item.element} />
-            })}
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/profile/*" element={<Profile />}>
+                <Route path="1" element={<Profile1 />} />
+                <Route path="2" element={<Profile2 />} />
+            </Route>
+            <Route path="/*" element={<NotFound />} />
+            <Route path="/Personnel" element={<Personnel />} />
+            <Route path="/Person" element={<Person />} />
         </Routes>
      );
 }
